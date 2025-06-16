@@ -61,18 +61,18 @@ int main(void)
 						LCD_Clear();
 						LCD_GotoXY(0,0);  
 						LCD_Puts("Temp: ");
-						LCD_GotoXY(6,0);         //di con tr? ??n c?t 6 h‡ng 0
-						sprintf(buff,"%d%cC ", (int)nhietdo, 223);  //223 l‡ kÌ t? ??c bi?t c?a kÌ hi?u ??
+						LCD_GotoXY(6,0);         //di con tr? ??n c?t 6 h√†ng 0
+						sprintf(buff,"%d%cC ", (int)nhietdo, 223);  //223 l√† k√≠ t? ??c bi?t c?a k√≠ hi?u ??
 						LCD_Puts(buff);
 						LCD_GotoXY(1,1);
 						LCD_Puts("It is very hot");
 						PORTD |=(1<<2);
-						//B?t ch‚n PD2 c?a PORTD b?ng c·ch set bit th? 2 c?a PORTD lÍn m?c cao (1).
-						// ?i?u n‡y th??ng d˘ng ?? b?t m?t ?Ën LED ho?c kÌch ho?t m?t thi?t b? ngo?i vi n‡o ?Û.
+						//B?t ch√¢n PD2 c?a PORTD b?ng c√°ch set bit th? 2 c?a PORTD l√™n m?c cao (1).
+						// ?i?u n√†y th??ng d√πng ?? b?t m?t ?√®n LED ho?c k√≠ch ho?t m?t thi?t b? ngo?i vi n√†o ?√≥.
 						_delay_ms(100);
 						PORTD &=~(1<<2);
-						//T?t ch‚n PD2 c?a PORTD b?ng c·ch clear bit th? 2 c?a PORTD xu?ng m?c th?p (0). 
-						//?i?u n‡y th??ng d˘ng ?? t?t ?Ën LED ho?c ng?ng kÌch ho?t thi?t b?.
+						//T?t ch√¢n PD2 c?a PORTD b?ng c√°ch clear bit th? 2 c?a PORTD xu?ng m?c th?p (0). 
+						//?i?u n√†y th??ng d√πng ?? t?t ?√®n LED ho?c ng?ng k√≠ch ho?t thi?t b?.
 						_delay_ms(100);
 					}
 					if ((nhietdo<32)&&(nhietdo>10))
@@ -109,11 +109,11 @@ int main(void)
 			default:
 				LCD_Init();
 				LCD_GotoXY(1,0);
-				//LCD_Puts("BuiNhuHanh");
+				
 				LCD_Puts("LeVietHung");
 				LCD_GotoXY(2,1);
 				LCD_Puts("MSSV 20213942");
-				//LCD_Puts("MSSV 20213904");
+				
 		}		
 	}
 	return 0;
